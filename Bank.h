@@ -16,7 +16,8 @@ public:
     Bank(void);
 
     Account openAccount(std::string, std::string, float, float);
-
+    std::vector<Account> getAccounts() const;
+    Account findAccount(const int acNum) const;
 };
 
 

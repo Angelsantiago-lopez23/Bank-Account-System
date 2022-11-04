@@ -6,8 +6,10 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
     Bank bank;
     Account accountOne;
+    bank.openAccount("Woodney", "Abraham", 200, 200);
     bank.openAccount("Jeffrey", "Abraham", 200, 200);
-    accountOne = bank.openAccount("Jeffrey", "Abraham", 200, 200);
-    std::cout << accountOne.getAccountNumber();
+    accountOne = bank.findAccount(1);
+    std::cout << accountOne.getName();
+
     return 0;
 }
