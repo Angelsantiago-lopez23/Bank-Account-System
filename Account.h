@@ -10,9 +10,18 @@
 class Account {
     std::string first_name, last_name;
     float checking, saving;
+
+    // For freezing account
+    bool status = true;
 public:
     Account(void);
     Account(std::string, std::string, float, float);
+
+    void changeStatus();
+
+    float getChecking() const;
+    float getSaving() const;
+    std::string getName() const;
 };
 
 
