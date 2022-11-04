@@ -10,6 +10,7 @@
 class Account {
     std::string first_name, last_name;
     float checking, saving;
+    static int accountNumber;
 
     // For freezing account
     bool status = true;
@@ -22,6 +23,7 @@ public:
     float getChecking() const;
     float getSaving() const;
     std::string getName() const;
+    bool getStatus() const;
 };
 
 
