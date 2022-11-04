@@ -24,6 +24,7 @@ public:
     float getSaving() const;
     std::string getName() const;
     bool getStatus() const;
+    int getAccountNumber() const ;
 };
 
 
