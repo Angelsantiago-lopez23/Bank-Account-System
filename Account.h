@@ -10,7 +10,8 @@
 class Account {
     std::string first_name, last_name;
     float checking, saving;
-    static int accountNumber;
+    int accountNumber;
+    static int nextAccountNumber;
 
     // For freezing account
     bool status = true;

@@ -8,10 +8,11 @@ Account::Account() {};
 
 Account::Account(std::string fName, std::string lName, float cBalance, float sBalance) :
     first_name(fName), last_name(lName), checking(cBalance), saving(sBalance){
-    Account::accountNumber++;
+    Account::nextAccountNumber++;
+    this->accountNumber = Account::nextAccountNumber;
 };
 
-int Account::accountNumber = 0;
+int Account::nextAccountNumber = 0;
 
 void Account::changeStatus() {
     // This will handle the freezing and unfreezing accounts
@@ -35,5 +36,5 @@ bool Account::getStatus() const {
 }
 
 int Account::getAccountNumber() const {
-    return Account::accountNumber;
+    return this->accountNumber;
 }
