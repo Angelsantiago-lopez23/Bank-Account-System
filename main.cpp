@@ -69,7 +69,7 @@ int main() {
 
             case 3:{
                 if(bank.getAccounts().size() == 0){
-                    std::cout << "No user found";
+                    std::cout << "No user found\n";
                     break;
                 }
 
@@ -87,8 +87,22 @@ int main() {
                 break;
             }
 
+            case 4:{
+                if(bank.getAccounts().size() == 0){
+                    std::cout << "No user found\n";
+                    break;
+                }
+                accountName(bank.getAccounts());
+                break;
+            }
+
+            case 5:{
+                std::cout << "Goodbye!";
+                exit(1);
+            }
+
             default:
-                std::cout << "Invalid Input";
+                std::cout << "Invalid Input\n";
                 break;
         }
     }
