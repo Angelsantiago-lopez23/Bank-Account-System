@@ -35,7 +35,6 @@ Account Bank::deposit(float amount, int acNum) {
     }
     //Update account vector
     this->accounts[acNum - 1] = account;
-    account.accountOutput();
     return account;
 }
 
@@ -59,7 +58,6 @@ Account Bank::withdraw(float amount, int acNum) {
     }
     //Update account vector
     this->accounts[acNum - 1] = account;
-    account.accountOutput();
     return account;
 }
 
