@@ -45,6 +45,32 @@ int main() {
                 bank.openAccount(first_name, last_name, checking, saving);
                 break;
             }
+
+                // Withdraw
+            case 2:{
+                if(bank.getAccounts().size() == 0){
+                    std::cout << "No user found";
+                    break;
+                }
+
+                accountName(bank.getAccounts());
+
+                std::cout << "Please pick an option: ";
+                int acNum;
+                std::cin >> acNum;
+
+                int amount;
+                std::cout << "Please enter amount: ";
+                std::cin >> amount;
+
+                bank.withdraw(amount, acNum);
+            }
+
+
+            default:
+                std::cout << "Invalid Input";
+                break;
+        }
     }
 
     return 0;
