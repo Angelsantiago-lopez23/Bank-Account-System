@@ -15,6 +15,29 @@ Account Bank::openAccount(std::string fName, std::string lName, float cBalance, 
     return account;
 }
 
+Account Bank::deposit(float amount, int acNum) {
+    char acType;
+    Account account;
+    account = this->findAccount(acNum);
+    account.accountOutput();
+
+    std::cout << "Checking or Saving: (c/s): ";
+    std::cin >> acType;
+
+    switch(acType){
+        case 'c':
+            account.depositChecking(amount);
+            break;
+        case 's':
+            account.depositSaving(amount);
+            break;
+
+    }
+    this->accounts[acNum - 1] = account;
+    account.accountOutput();
+    return account;
+}
+
 std::vector<Account> Bank::getAccounts() const {
     return this->accounts;
 }

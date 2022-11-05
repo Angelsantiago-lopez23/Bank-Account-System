@@ -8,8 +8,8 @@ int main() {
     Account accountOne;
     bank.openAccount("Woodney", "Abraham", 200, 200);
     bank.openAccount("Jeffrey", "Abraham", 200, 200);
-    accountOne = bank.findAccount(1);
-    std::cout << accountOne.getName();
+    bank.deposit(100, 1);
+
 
     return 0;
 }
