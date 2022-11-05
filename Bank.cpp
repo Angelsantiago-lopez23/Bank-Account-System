@@ -33,6 +33,31 @@ Account Bank::deposit(float amount, int acNum) {
             break;
 
     }
+    //Update account vector
+    this->accounts[acNum - 1] = account;
+    account.accountOutput();
+    return account;
+}
+
+Account Bank::withdraw(float amount, int acNum) {
+    char acType;
+    Account account;
+    account = this->findAccount(acNum);
+    account.accountOutput();
+
+    std::cout << "Checking or Saving: (c/s): ";
+    std::cin >> acType;
+
+    switch(acType){
+        case 'c':
+            account.withdrawChecking(amount);
+            break;
+        case 's':
+            account.withdrawSaving(amount);
+            break;
+
+    }
+    //Update account vector
     this->accounts[acNum - 1] = account;
     account.accountOutput();
     return account;

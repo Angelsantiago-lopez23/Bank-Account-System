@@ -8,7 +8,7 @@ int main() {
     Account accountOne;
     bank.openAccount("Woodney", "Abraham", 200, 200);
     bank.openAccount("Jeffrey", "Abraham", 200, 200);
-    bank.deposit(100, 1);
+    bank.withdraw(100, 1);
 
 
     return 0;

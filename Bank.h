@@ -17,6 +17,7 @@ public:
 
     Account openAccount(std::string, std::string, float, float);
     Account deposit(float, int);
+    Account withdraw(float, int);
     std::vector<Account> getAccounts() const;
     Account findAccount(const int) const;
 };

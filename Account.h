@@ -22,6 +22,8 @@ public:
     void changeStatus();
     void depositChecking(float amount);
     void depositSaving(float amount);
+    void withdrawChecking(float amount);
+    void withdrawSaving(float amount);
     void accountOutput();
 
     float getChecking() const;

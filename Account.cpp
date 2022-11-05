@@ -25,13 +25,21 @@ void Account::changeStatus() {
     }
 }
 
-// This will handle withdraw and deposit for checking
 void Account::depositChecking(float amount) {
+    // This will handle withdraw and deposit for checking
     this->checking += amount;
 }
 
 void Account::depositSaving(float amount) {
     this->saving += amount;
+}
+
+void Account::withdrawChecking(float amount) {
+    this->checking -= amount;
+}
+
+void Account::withdrawSaving(float amount) {
+    this->saving -= amount;
 }
 
 void Account::accountOutput() {
