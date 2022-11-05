@@ -2,6 +2,7 @@
 // Created by Jeffrey Abraham on 11/4/22.
 //
 
+#include <iostream>
 #include "Account.h"
 
 Account::Account() {};
@@ -17,6 +18,29 @@ int Account::nextAccountNumber = 0;
 void Account::changeStatus() {
     // This will handle the freezing and unfreezing accounts
     this->status = !this->status;
+    if(this->status){
+        std::cout << "Account Open\n";
+    }else{
+        std::cout << "Account Closed\n";
+    }
+}
+
+// This will handle withdraw and deposit for checking
+void Account::depositChecking(float amount) {
+    this->checking += amount;
+}
+
+void Account::depositSaving(float amount) {
+    this->saving += amount;
+}
+
+void Account::accountOutput() {
+    std::cout << '\n';
+    std::cout << "#####################################\n";
+    std::cout << this->getName() << '\n';
+    std::cout << "Checking: $" << this->checking << '\n';
+    std::cout << "Saving: $" << this->saving << '\n';
+    std::cout << "#####################################\n";
 }
 
 float Account::getChecking() const {
@@ -25,6 +49,10 @@ float Account::getChecking() const {
 
 float Account::getSaving() const {
     return this->saving;
+}
+
+float Account::getBalance() const {
+    return this->checking + this->saving;
 }
 
 std::string Account::getName() const {

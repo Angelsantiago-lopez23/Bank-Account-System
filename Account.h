@@ -20,12 +20,16 @@ public:
     Account(std::string, std::string, float, float);
 
     void changeStatus();
+    void depositChecking(float amount);
+    void depositSaving(float amount);
+    void accountOutput();
 
     float getChecking() const;
     float getSaving() const;
+    float getBalance() const;
     std::string getName() const;
     bool getStatus() const;
-    int getAccountNumber() const ;
+    int getAccountNumber() const;
 };
 
 
