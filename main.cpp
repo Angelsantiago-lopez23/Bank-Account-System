@@ -38,10 +38,11 @@ int main() {
                 std::cout << "Please enter last name: ";
                 std::cin >> last_name;
 
-                std::cout << "Please enter initial checking: ";
+                std::cout << "Please enter initial checking:\n ";
                 std::cin >> checking;
-                std::cout << "Please enter initial saving: ";
+                std::cout << "Please enter initial saving:\n ";
                 std::cin >> saving;
+                std::cout << "\n\n\n\n\n\n";
                 bank.openAccount(first_name, last_name, checking, saving);
                 break;
             }
